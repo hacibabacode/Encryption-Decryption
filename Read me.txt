@@ -1,0 +1,24 @@
+Merhaba;
+
+Bu projenin amacı girilen mesajı Şifreleme ve şifrelenen mesajı çözme yapmaktır.
+İlk olarak projeyi açıklamak başladığımızda projemişde en başta polymorphism oluşturduk.
+Bu oluşturduğumuz polymorphism Ana sınıfın altında 2 altsınıf oluşturduk.
+Bunlar Ana sınıf olarak class Ogrenci  {}
+  Alt sınıf     class Encryption extends Ogrenci  {}
+                class Decryption extends Ogrenci  {} şeklindedir.
+
+class Ogrenci  {} 
+Sınıfının içine Giriş diyebiliriz.Burda kullanıcan isim ve numara girişi alıyoruz.
+Ve daha sonra bu numaranın doğruluğu kontrol ediyoruz. 
+
+Eğer Numara doğru ise class Encryption extends Ogrenci  {} classına geçip burda şifrelemek istediğimiz metini yazıyoruz.
+Bu metini kullanıcan girmesini istedikten sonra key(Anahtar) alarak şifreleme yapıyoruz. 
+Bu key(Anahtar) öğrenin okul numarasını olarak tekrar girmesini istiyoruz.Buradaki amaç her öğrencinin kendine ait key(Anahtar) olmasını sağlamaktır.
+
+Şifreleme yapıldıktan sonra  class Decryption extends Ogrenci  {} geçiş yapıyoruz.
+Burda tekrar isim ve öğrenci numarası alıyoruz.Daha sonra şifrelenmiş olan Encryption mesajını istiyoruz.
+Encryption olan mesajı yazdıktan sonra tekrarda her öğrencinin kendine ait olan key(Anahtar) girmesini istiyoruz.
+Key(Anahtar) girdikten sonra Decryption yaparak şifreleme yapmadan önceki metini tekrar elde etmiş oluyoruz.
+
+Böylelikle bir öğrencinin ilk önce kendisine ait key(Anahtarı) ile bir metni Encryption yapıyoruz.
+Daha sonra bu Encryption yapılmış metni tekrar key(Anahtar) ile Decryption yaparak şifreli metni çözerek asıl metine ulaşmış oluyoruz.
